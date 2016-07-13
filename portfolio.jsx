@@ -148,6 +148,7 @@ var Portfolio = React.createClass({
     };
   },
   selectPost: function(id) {
+    history.pushState({}, "Joe Buckingham", "index.html");
     this.setState({
       selectedPost: id,
     });
