@@ -1,0 +1,242 @@
+@black: #000;
+@white: #fff;
+@footer: fade(#3F4C61, 50%);
+
+body {
+  font-family: 'NowLight';
+  line-height: 1.6;
+}
+
+a {
+  color: currentColor;
+  text-decoration: inherit;
+}
+
+/*****************/
+/* HEADER STYLES */
+/*****************/
+
+h1, h2, h3, h4, p {
+  margin-bottom: 0.3em;
+  margin-top: 0.3em
+}
+
+h1, h2 {
+  font-family: 'NowMedium';
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.full-height {
+  height: 100vh;
+}
+.full-width {
+  width: 100vw;
+}
+
+/******************/
+/* MODULAR STYLES */
+/******************/
+
+.half-width {
+  width: 50%;
+  height: 100%;
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.flex {
+  display: flex;
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.row {
+    flex-direction: row;
+  }
+}
+
+.pad-5 {
+  padding: 5%;
+}
+.pad-10 {
+  padding: 10%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.text-center {
+  text-align: center;
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+/**************/
+/* NAVIGATION */
+/**************/
+nav {
+  font-family: "NowMedium";
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  a {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+    margin-right: 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-shadow: 1px 1px 0 white;
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+  }
+  @media (max-width: 800px) {
+    justify-content: space-around;
+    a {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+article {
+  // Alternate sides - without messing with symantic page content.
+  &:nth-of-type(odd) {
+    flex-direction: row;
+  }
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  @media (max-width: 800px) {
+    &:nth-of-type(even), &:nth-of-type(odd) {
+      flex-direction: column;
+    }
+  }
+}
+
+.picture {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: row;
+  img {
+    height: 100%;
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.PostDetail {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#intro {
+  height: ~"calc(100vh - 80px)";
+  &:before {
+    content: "";
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../img/me.png);
+    background-size: auto 100vh;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: white;
+    transition: opacity 1s ease;
+    @media (max-width: 1158px) {
+      opacity: 0.2;
+    }
+  }
+  h1, h2, h3, h4, p {
+    text-align: left;
+    width: 80%;
+  }
+}
+
+#footer {
+  background: @footer;
+  color: @white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  a {
+    color: @white;
+    &:hover {
+      color: fade(@white, 80%);
+    }
+  }
+  li {
+    margin: 10px;
+  }
+}
+
+#backbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  font-family: 'NowMedium';
+  letter-spacing: 1px;
+  margin: 30px;
+  @media (max-width: 800px) {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+
+/********/
+/* MISC */
+/********/
+.image { opacity: 0; transition: opacity 1.0s; }
+.image-loaded { opacity: 1; }
+
+// Flipping emails and phone numbers so they can't be fished out by spambots
+.reverse {
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
