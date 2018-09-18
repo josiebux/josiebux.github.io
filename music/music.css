@@ -11,6 +11,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#849bcd', end
 
 .container {
   width: 400px;
+  max-width: 80vw;
   margin: auto;
   position: absolute;
 top: 50%;
