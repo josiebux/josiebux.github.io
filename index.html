@@ -1,43 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff">
-  <title>Joe Buckingham</title>
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/now" type="text/css"/>
-  <link rel="stylesheet" href="reset.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="portfolio.css" media="screen" title="no title" charset="utf-8">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-  <script src="https://fb.me/react-15.0.2.min.js"></script>
-  <script src="https://fb.me/react-dom-15.0.2.min.js"></script>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Work</a>
-    <a href="links.html">Links</a>
-    <a href="mailto:joe_buckingham@live.co.uk">Contact</a>
-  </nav>
-  <section id="content"></section>
-  <section id="footer" class="pad-5">
-    <div>
-      <ul>
-        <li>
-          <a href="https://facebook.com/joebuckingham"><i class="icon-facebook"></i></a>
-          <a href="https://twitter.com/joebuckingham"><i class="icon-twitter"></i></a>
-          <a href="https://uk.linkedin.com/in/joerbuckingham"><i class="icon-linkedin"></i></a>
-        </li>
-        <li>&copy; Joe Buckingham 2016</li>
-      </ul>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Joe Buckingham</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="v2.css">
+    <link rel="icon" href="img/favicon.png" sizes="32x32">
+    <script>
+      function playAnimate() {
+        document.body.style.backgroundImage = "url('img/particles.gif')";
+        document.getElementById("showreel").style.borderColor = 'rgba(255,255,255,0)';
+      }
+      function pauseAnimate() {
+        document.body.style.backgroundImage = "none";
+        document.getElementById("showreel").style.borderColor = '#EF5285';
+      }
+    </script>
+  </head>
+  <body>
+    <div class="central">
+      <p>
+        Hey, I'm <b>Joe</b>.
+      </p>
+      <p>
+        I'm a <b>multi-disciplinary designer</b> with a tech background and a particular interest in <b>motion design + video editing.</b>
+      </p>
+      <p>
+        <a href="cv.pdf" class="col1" target="blank">Here's my CV.</a>
+      </p>
+      <p>Here's my showreel.</p>
     </div>
-    <div>
-      <ul>
-        <li><i class="icon-at"></i><span class="reverse">ku.oc.evil@mahgnikcub_eoj</span></li>
-        <li><i class="icon-phone"></i><span class="reverse">94897853570</span></li>
-      </ul>
+    <video src="Showreel.mp4" id="showreel" controls onplay="playAnimate()" onpause="pauseAnimate()" poster="img/showreel-poster.jpg"></video>
+    <div class="central">
+      <div class="panel-2">
+        <div class="width-50">
+          <p>Here's a couple of those things out in the wild:</p>
+          <ul>
+            <li>
+              <a href="https://twitter.com/NetflixUK/status/1104080506323431425" target="blank" class="col1">
+                International Women's Day 2019 for Netflix UK
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/Bsk2WmXAcOi/" target="blank" class="col1">
+                Otis Milburn's Condom Tutorial
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="width-50">
+          <p>And here's a few which would've looked weird in a showreel but I think are fun:</p>
+          <ul>
+            <li>
+              <a href="https://twitter.com/NetflixUK/status/1108026122145615878" target="blank"  class="col2">
+                The <i>Queer Eye</i> guys can't say "squirrel".
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/NetflixUK/status/1098973927551000576" target="blank" class="col2">
+                Natasha Lyonne makes some weird noises in <i>Russian Doll</i>.
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>Cool, thanks. Hire me?</p>
     </div>
-  </section>
-</body>
-<script type="text/babel" src="portfolio.jsx"></script>
+  </body>
 </html>
