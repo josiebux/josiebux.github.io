@@ -1,70 +1,199 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Joe Buckingham</title>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="v2.css">
-    <link rel="icon" href="img/favicon.png" sizes="32x32">
-    <script>
-      function playAnimate() {
-        document.body.style.backgroundImage = "url('img/particles.gif')";
-        document.getElementById("showreel").style.borderColor = 'rgba(255,255,255,0)';
-      }
-      function pauseAnimate() {
-        document.body.style.backgroundImage = "none";
-        document.getElementById("showreel").style.borderColor = '#EF5285';
-      }
-    </script>
-  </head>
-  <body>
-    <div class="central">
-      <p>
-        Hey, I'm <b>Joe</b>.
-      </p>
-      <p>
-        I'm a <b>multi-disciplinary designer</b> with a tech background and a particular interest in <b>motion design + video editing.</b>
-      </p>
-      <p>
-        <a href="cv.pdf" class="col1" target="blank">Here's my CV.</a>
-      </p>
-      <p>Here's my showreel.</p>
+<head>
+  <meta charset="UTF-8">
+  <title>Joe Buckingham</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
+  <link rel="icon" href="content/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <img src="content/me.png" alt="" class="profile-pic">
+      <h1>Joe Buckingham</h1>
+      <p>multi-disciplined motion designer, video editor, and generally helpful guy to have around.</p>
     </div>
-    <video src="Showreel.mp4" id="showreel" controls onplay="playAnimate()" onpause="pauseAnimate()" poster="img/showreel-poster.jpg"></video>
-    <div class="central">
-      <div class="panel-2">
-        <div class="width-50">
-          <p>Here's a couple of those things out in the wild:</p>
-          <ul>
-            <li>
-              <a href="https://twitter.com/NetflixUK/status/1104080506323431425" target="blank" class="col1">
-                International Women's Day 2019 for Netflix UK
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/p/Bsk2WmXAcOi/" target="blank" class="col1">
-                Otis Milburn's Condom Tutorial
-              </a>
-            </li>
-          </ul>
+    <div class="posts">
+
+      <div class="post">
+        <div class="content">
+          <video class="video horizontal" src="content/showreel.mp4" controls poster="content/showreel-poster.jpg"></video>
         </div>
-        <div class="width-50">
-          <p>And here's a few which would've looked weird in a showreel but I think are fun:</p>
-          <ul>
-            <li>
-              <a href="https://twitter.com/NetflixUK/status/1108026122145615878" target="blank"  class="col2">
-                The <i>Queer Eye</i> guys can't say "squirrel".
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/NetflixUK/status/1098973927551000576" target="blank" class="col2">
-                Natasha Lyonne makes some weird noises in <i>Russian Doll</i>.
-              </a>
-            </li>
-          </ul>
+        <div class="description">
+          <h2>Showreel</h2>
+          <p>Some of my favourite things I’ve worked on over the last few years.</p>
+          <p>Edited in After Effects.<br />Music is ‘6 Years’ by Odd Kid Out</p>
         </div>
       </div>
-      <p>Cool, thanks. Hire me?</p>
+
+      <div class="post">
+        <div class="content">
+          <video class="video square" src="content/sexed-otis.mp4" controls poster="content/sexed-otis-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Sex Education | Otis Milburn's Condom Tutorial</h2>
+          <p>A video edit to promote Netflix’s Sex Education - this was a really fun chance to play with precise coming timing, as well as adding animation that added to, but didn’t distract from, the overall piece.</p>
+          <p>Edited in Premiere Pro with keying, compositing and animation done in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video horizontal" src="content/trinkets-steal.mp4" controls poster="content/trinkets-steal-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Trinkets | You Wouldn't Steal A...</h2>
+          <p>A parody of the classic “You wouldn’t steal a car” pre-roll, to promote Netflix’s Trinkets, which tells the story of three teenage shoplifters. This didn’t make it into the final campaign due to a change in overall direction, but it was too much fun to work on not to include.</p>
+          <p>Edited in Premiere Pro with titles, animation and colouring in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video square" src="content/brand-iwd.mp4" controls poster="content/brand-iwd-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Netflix UK | International Women's Day 2019</h2>
+          <p>A short-turnaround video for Netflix UK to celebrate International Women’s Day. Designed to be inspiring and moving but without relying on the tired “strong female character” trope - because there’s more to well-written female characters than just “strength”.</p>
+          <p>Edited in Premiere Pro with titles in After Effects. </p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video horizontal" src="content/blockbuster.mp4" controls loop poster="content/blockbuster-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Blockbuster vs. Netflix</h2>
+          <p><a href="https://twitter.com/joebuckingham/status/1096711409805647872" target="blank">After tweeting this,</a> I took the opportunity to practice recreating an existing piece from scratch, replicating the motion and lighting of the original.</p>
+          <p>Animated in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video vertical" src="content/brand-st.mp4" controls loop poster="content/brand-st-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Netflix UK | Stranger Things Spotify playlist</h2>
+          <p>An Instagram story to push to a Spotify playlist for Stranger Things season 3 - while hinting that there might be more to the playlist than first meets the eye.</p>
+          <p>Sound design in Audition, animation in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video square" src="content/sexed-squeal.mp4" controls loop poster="content/sexed-squeal-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Sex Education | Otis's Squeals</h2>
+          <p>Using a fun text treatment to add humour during an edit of Otis’s various squeaks and squawks in Sex Education.</p>
+          <p>Edited in Premiere Pro, text animation in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video vertical" src="content/trinkets-spotify.mp4" controls loop poster="content/trinkets-spotify-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Trinkets | Spotify Playlist</h2>
+          <p>A quick turnaround Instagram story to push to the official Trinkets playlist on Spotify. The bold colours and brash visual style of Trinkets were fun to play with to make something that was on-trend but not inaccessible.</p>
+          <p>Created in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video square" src="content/siu-glenn.mp4" controls loop poster="content/siu-glenn-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Set It Up | Glenn's Grammy</h2>
+          <p>A piece to tie in with the premiere of Netflix’s Set It Up, that needed to strike a balance between being polished enough for Netflix’s social accounts, but also genuine enough for Glenn Powell’s own accounts.
+          </p>
+          <p>Edited in Premiere Pro with graphics in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video square" src="content/sexed-psa.mp4" controls loop poster="content/sexed-psa-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Sex Education | Public Service Announcement</h2>
+          <p>The general public’s first look at Netflix’s Sex Education - I took the opportunity to get across the humour of the show within the edit, adding the ending montage that was not part of the original script.</p>
+          <p>Edited in Premiere Pro.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <img src="content/asoue-grid-1.jpg" alt="" class="image full vertical">
+        </div>
+        <div class="description">
+          <h2>A Series of Unfortunate Events | Instagram Grid</h2>
+          <p>A beast of an Instagram grid to launch the Instagram account for A Series of Unfortunate Events. Fans of the show love to dig into content with lots of hidden details, clues and Easter eggs, so we created an evidence wall, comping together photography of the show’s props. Behind the board, using Instagram’s carousel feature, we hid an even richer second layer of video, photography, and designed content (a few static examples below). While it’s been broken up by later posts now, the second layer content is still worth a look at <a href="https://www.instagram.com/unfortunate/" target="blank">@unfortunate</a> (at the very bottom of the account).</p>
+          <p>Main grid created in Photoshop, “second layer” content created across Photoshop, Premiere Pro and After Effects.</p>
+          <div class="gallery">
+            <img src="content/asoue-grid-2.jpg" alt="" class="image half">
+            <img src="content/asoue-grid-3.jpg" alt="" class="image half">
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <video class="video vertical" src="content/brand-qe.mp4" controls loop poster="content/brand-qe-poster.jpg"></video>
+        </div>
+        <div class="description">
+          <h2>Netflix UK | Queer Eye affirmations</h2>
+          <p>A quick-turnaround Instagram story for Netflix UK. With clips from the finished episodes to work with, I added animation to account for the cutaways to other shots. </p>
+          <p>Created in After Effects.</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="content">
+          <img src="content/asoue-machine-1.jpg" alt="" class="image full">
+        </div>
+        <div class="description">
+          <h2>A Series of Unfortunate Events | Misfortune Machine</h2>
+          <p>Working with an experiential agency to re-skin a real-life Zoltar machine to promote A Series of Unfortunate Events. I designed and artworked the vinyl wrap for the machine itself, as well as creating the tickets that it printed. I also then concepted, shot and created promotional content for the event, including promotional videos and an interactive version of the machine for social.</p>
+          <p>Machine designs created in Photoshop. <br/>
+            Promotional content created in After Effects from footage I shot. <br/>
+            Photographs of the machine in situ are not my own.</p>
+            <div class="gallery">
+              <img src="content/asoue-machine-2.jpg" alt="" class="image half">
+              <img src="content/asoue-machine-3.jpg" alt="" class="image half">
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="content">
+            <video class="video square" src="content/brand-nadiagrunt.mp4" controls loop poster="content/brand-nadiagrunt-poster.jpg"></video>
+          </div>
+          <div class="description">
+            <h2>Netflix UK | Natasha Lyonne</h2>
+            <p>A silly video edit for Netflix UK - not so much an example of technical skill as an example of an edit where I was about to bring extra humour out of a piece through timing and creative subtitling.</p>
+            <p>Edited in Premiere Pro, text in After Effects.</p>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="content">
+            <video class="video square" src="content/sexed-meangirls.mp4" controls poster="content/sexed-meangirls-poster.jpg"></video>
+          </div>
+          <div class="description">
+            <h2>Sex Education | Season 2</h2>
+            <p>A video edit from green screen footage to announce the second season of Sex Education. Care was taken to replicate the colours and style of the show, including the chromatic aberration effect.</p>
+            <p>Edited in Premiere Pro with keying, compositing and chroma FX in After Effects.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </body>
-</html>
+  </html>
