@@ -99,6 +99,9 @@ div {
     .content {
       background-color: tint(@col-grey, 50%);
     }
+    .content.pair {
+      display: flex;
+    }
     .description {
       padding: @global-padding;
     }
@@ -118,6 +121,7 @@ div {
         max-height: 700px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 0;
       }
     }
     .image {

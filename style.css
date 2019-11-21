@@ -101,6 +101,9 @@ div {
 .posts .post .content {
   background-color: #eeeeee;
 }
+.posts .post .content.pair {
+  display: flex;
+}
 .posts .post .description {
   padding: 2em;
 }
@@ -121,6 +124,7 @@ div {
   max-height: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
 }
 .posts .post .image.full {
   width: 100%;
