@@ -34,6 +34,7 @@ a:hover {
 main {
   padding: 16px;
   flex-grow: 2;
+  max-width: 640px;
 }
 main h1 {
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -48,11 +49,7 @@ main h2 {
   font-size: 24px;
   margin: 32px 0 8px 0;
 }
-main p {
-  max-width: 640px;
-}
 main blockquote {
-  max-width: 640px;
   font-style: italic;
 }
 main .cta {
@@ -67,6 +64,9 @@ main p.dateline {
   margin-top: 0;
   margin-bottom: 32px;
 }
+main ol li {
+  margin-bottom: 8px;
+}
 nav {
   padding: 16px;
   flex-grow: 1;
@@ -76,6 +76,10 @@ nav h1 {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 400;
   font-size: 24px;
+}
+nav h1 a {
+  color: inherit;
+  text-decoration: inherit;
 }
 nav ul {
   list-style: none;
@@ -101,9 +105,13 @@ table {
 table tr:not(:last-child) {
   border-bottom: solid 2px rgba(60, 59, 67, 0.2);
 }
-table td {
+table td,
+table th {
   margin: 0;
   padding: 16px;
+}
+table th {
+  font-weight: 500;
 }
 table p {
   text-wrap: balance;
@@ -113,6 +121,10 @@ table p:first-of-type {
 }
 table p:last-of-type {
   margin-bottom: 0;
+}
+table.topalign td,
+table th {
+  vertical-align: top;
 }
 #menu-button {
   padding: 16px;
