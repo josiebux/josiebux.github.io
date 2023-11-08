@@ -126,6 +126,9 @@ table.topalign td,
 table th {
   vertical-align: top;
 }
+img.banner {
+  max-width: 100%;
+}
 #menu-button {
   padding: 16px;
   display: none;
@@ -133,6 +136,7 @@ table th {
 @media screen and (max-width: 600px) {
   body {
     flex-direction: column;
+    padding: 16px;
   }
   #menu-button {
     display: block;
